@@ -1,7 +1,7 @@
 # 인스타그램 클론코딩
 (멘토)서연주-(멘티)김수연, 임수안 HTML,CSS,React 공부 시작합니다!
 ![pic1](./imgforupload/스크린샷0710_1.png)
-![pic1](./imgforupload/스크린샷0711_4.png)
+![pic1](./imgforupload/스크린샷0711_3.png)
 
 ## 20210703 OT(이론)
 Github의 여러 기능(PR, Issue, 칸반보드, Action, 웹호스팅 등...)과 그 활용에 대해 알아보고 github 사용을 편리하게 해주는 툴을 소개했습니다.
