@@ -1,70 +1,10 @@
-# Getting Started with Create React App
+# 인스타그램 클론코딩
+(멘토)서연주-(멘티)김수연, 임수안 HTML,CSS,React 공부 시작합니다!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### 0703 OT(이론)
+Github의 여러 기능(PR, Issue, 칸반보드, Action, 웹호스팅 등...)과 그 활용에 대해 알아보고 github 사용을 편리하게 해주는 툴을 소개했습니다.
+HTML, CSS, React가 무엇인지 간략하게 설명하고 아토믹 디자인과 css-in-js에 관해 알아보고 개발 환경 설정(Create React App과 Emotion)을 마쳤습니다.
+이후 다음 시간부터 진행될 실습에 관해 간략하게 알아보았습니다.
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+-> 오늘은 깃허브 쓰는 방법, html.css,.js.react가 무엇인지 배웠다. html은 뼈대. css는 겉모습, js는 뇌라고 했다. html이랑 css는 프로그래밍 언어가 아니라고 했다. 몰랐다. 아토믹 디자인에 대해서 배웠다. 웹사이트가 그냥 한 페이지로 이루어지는 줄 알았는데, 여러가지 요소로 이루어져있다는 것을 배웠다. 그리고 똑같은 디자인을 복붙하는 것은 코드 재사용성이 좋지 않다고 했다. 내가 객지프때 이렇게 했는데,,, 약간 객지프에서 배운 내용이랑 비슷한 내용이라고 느꼈다 이번에는 실습을 많이 해보면서 연습을 많이 해야겠다. 객지프때 실습을 충분히 안했더니 실력이 잘 안늘었던 것을 교훈삼아서 열심히 실습하겠다. 앞으로 가야할 길이 많다고 느꼈다. 열심히 해야겠다.!! 
+![pic1](../imgforupload.1.png)
