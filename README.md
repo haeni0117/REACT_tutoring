@@ -32,6 +32,6 @@
 ## 인증샷
 |날짜|장소 및 시간|인증샷|
 |:---:|:---:|:---:|
-|20210703|@이화스터디카페 18:00~19:30|<img src="./imgforupload/인증샷0703.png" width="600" height="400">|
-|20210710|@이화스터디카페 15:30~17:00|<img src="./imgforupload/인증샷0710.png" width="600" height="400">|
-|20210711|@랭스터디카페 15:30~17:00|<img src="./imgforupload/인증샷0711.jpeg" width="600" height="400">|
+|20210703|@이화스터디카페 18:00~19:30|<img src="./imgforupload/인증샷0703.png" width="600" height="300">|
+|20210710|@이화스터디카페 15:30~17:00|<img src="./imgforupload/인증샷0710.png" width="600" height="300">|
+|20210711|@랭스터디카페 15:30~17:00|<img src="./imgforupload/인증샷0711.jpeg" width="600" height="300">|
