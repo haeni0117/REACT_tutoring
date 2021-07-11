@@ -19,9 +19,11 @@ HTML Tag와 semantic한 태그 작성의 중요성에 대해서 언급하고 Rea
 ![pic1](./imgforupload/스크린샷0710_3.png)
 
 ## 20210711 
-![pic1](./imgforupload/스크린샷0710_1.png)
-![pic1](./imgforupload/스크린샷0710_2.png)
-![pic1](./imgforupload/스크린샷0710_3.png)
+![pic1](./imgforupload/스크린샷0711_1.png)
+![pic1](./imgforupload/스크린샷0711_2.png)
+![pic1](./imgforupload/스크린샷0711_3.png)
+![pic1](./imgforupload/스크린샷0711_4.png)
+![pic1](./imgforupload/스크린샷0711_5.png)
 
 ## 인증샷
 |날짜|장소 및 시간|인증샷|
