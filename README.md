@@ -29,6 +29,13 @@
 ![pic1](./imgforupload/스크린샷0711_4.png)
 ![pic1](./imgforupload/스크린샷0711_5.png)
 
+## 20210717
+![pic1](./imgforupload/스크린샷0717_1.png)
+![pic1](./imgforupload/스크린샷0717_2.png)
+![pic1](./imgforupload/스크린샷0717_3.png)
+![pic1](./imgforupload/스크린샷0717_4.png)
+![pic1](./imgforupload/스크린샷0717_5.png)
+
 ## 인증샷
 |날짜|장소 및 시간|인증샷|
 |:---:|:---:|:---:|
