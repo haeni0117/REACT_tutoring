@@ -6,7 +6,6 @@ import PostImg from "../assets/images/image1.jpeg";
 import re1 from "../assets/images/image2.jpeg";
 import re2 from "../assets/images/img3.jpeg";
 import MyProfile from "../assets/images/프로필.jpeg";
-import Comment from "../pages/components/comment.js";
 
 const Post = () => {
   const [day, setDay] = useState(1);
@@ -109,6 +108,42 @@ const Post = () => {
                   #고고팬츠
                 </Styledmargin>
               </div>
+              <StyledDay
+                onClick={() => {
+                  setDay(day + 1);
+                }}
+              >
+                {day}일
+              </StyledDay>
+            </div>
+          </StyledWrapper>
+
+          <StyledWrapper>
+            <div
+              css={css`
+                background-color: black;
+              `}
+            >
+              <StyledProfile src={PostImg} />
+            </div>
+
+            <div
+              css={css`
+                background-color: yellow;
+              `}
+            >
+              <StyledContentsWrapper>
+                <Styledmargin href="https://www.google.com">
+                  muyaho_123
+                </Styledmargin>
+                <span
+                  css={css`
+                    color: black;
+                  `}
+                >
+                  웹사이트 만든 거 처음이다 !~!~ 무야호ㅋㅋㅋㅋㅋ
+                </span>
+              </StyledContentsWrapper>
 
               <StyledDay
                 onClick={() => {
@@ -117,17 +152,8 @@ const Post = () => {
               >
                 {day}일
               </StyledDay>
-              <div>답글달기</div>
             </div>
           </StyledWrapper>
-
-          <Comment
-            profileImg={PostImg}
-            userName={"ewha"}
-            contents={"이화여자대학교"}
-            date={day}
-            setDay={setDay}
-          />
         </div>
       </div>
     </div>
