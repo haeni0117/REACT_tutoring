@@ -3,186 +3,185 @@ import { jsx, css } from "@emotion/react";
 import styled from "@emotion/styled";
 import react, { useState } from "react";
 import PostImg from "../assets/images/image1.jpeg";
-import re1 from "../assets/images/image2.jpeg";
-import re2 from "../assets/images/img3.jpeg";
-import MyProfile from "../assets/images/프로필.jpeg";
+import MyProfileImg from "../assets/images/image1.jpeg";
+import CommentProfileImg from "../assets/images/image1.jpeg";
+import Comment from "./components/comment";
+
+//icons
+import {
+  IoHeartOutline,
+  IoChatbubbleOutline,
+  IoPaperPlaneOutline,
+  IoBookmarkOutline,
+  IoHeartSharp,
+} from "react-icons/io5";
 
 const Post = () => {
-  const [day, setDay] = useState(1);
+  const [day, setDay] = useState(4);
+  const [like, setLike] = useState(false);
+  const [likeNum, setLikeNum] = useState(3976);
   return (
-    //<><div>난 여락이들이야 만나서 반가워 ㅎㅎ</div>
     <div
       css={css`
         display: flex;
-        background-color: white;
       `}
     >
       <img
         css={css`
-          width: 600px;
-          height: 600px;
+          width: 599px;
+          height: 524px;
         `}
         src={PostImg}
       />
+
       <div
         css={css`
-          display: flex;
-          flex-direction: column;
-          // padding: 15px 17px 20px 15px;
           background-color: skyblue;
         `}
       >
         <div
           css={css`
-            background-color: yellowgreen;
             display: flex;
             padding: 21px 17px 15px 19px;
             border-bottom: 1px solid black;
           `}
         >
+          <StyledProfile src={MyProfileImg} />
           <div>
-            <StyledProfile src={PostImg} />
-          </div>
-
-          <div>
-            <div
-              css={css`
-                font-weight: bold;
-                margin-bottom: 3px;
-              `}
-            >
-              yeonjuice
-            </div>
-
-            <div>Chiang Mai,Thailand</div>
+            <StyledLink>youlakk</StyledLink>
+            <div>Chaing Mai, Thailand</div>
           </div>
         </div>
         <div
           css={css`
             background-color: pink;
-            //display: flex;
-            //padding: 24px 27px 11px 17px;
+            padding: 0 27px 11px 17px;
+            border-bottom: 1px solid #262626;
           `}
         >
           <StyledWrapper>
+            <StyledProfile src={MyProfileImg} />
             <div
               css={css`
-                background-color: black;
+                background-color: orange;
               `}
             >
-              <StyledProfile src={PostImg} />
-            </div>
-
-            <div
-              css={css`
-                background-color: yellow;
-                margin-bottom
-              `}
-            >
-              <StyledContentsWrapper>
-                <Styledmargin href="https://www.google.com">
-                  youlakk
-                </Styledmargin>
-                <span
-                  css={css`
-                    color: black;
-                  `}
-                >
+              <StyledContentWrapper>
+                <StyledLink href="#">youlakk</StyledLink>
+                <span>
                   태국 파얍대학교 뒷골목에 있던 카페🌽 정말 행복해보인당💛💛💛
                 </span>
-              </StyledContentsWrapper>
+              </StyledContentWrapper>
+
               <div
                 css={css`
-                  //margin-top: 25px;
                   margin-bottom: 20px;
-                  color: navy;
                 `}
               >
-                <Styledmargin
+                <StyledLink
                   css={css`
-                    font-weight: normal;
                     color: navy;
+                    font-weight: normal;
                   `}
-                  href="https://www.google.com/search?q=%EA%B3%A0%EA%B3%A0%ED%8C%AC%EC%B8%A0+3%EC%84%B8%EB%8C%80&ei=QprqYNmPFsem0wSYw4mIBQ&oq=%EA%B3%A0%EA%B3%A0%ED%8C%AC%EC%B8%A0+3%EC%84%B8%EB%8C%80&gs_lcp=Cgdnd3Mtd2l6EAM6CAgAELEDEIMBOgUIABCxAzoECAAQCjoCCAA6BAgAEEM6BwgAELEDEEM6BggAEAUQHkoECEEYAFD6CFjQLGDaMWgNcAB4AoABhgGIAaYRkgEEMS4xOZgBAKABAaoBB2d3cy13aXqwAQDAAQE&sclient=gws-wiz&ved=0ahUKEwjZuLyCvNrxAhVH05QKHZhhAlEQ4dUDCA4&uact=5"
+                  href="#"
                 >
-                  #고고팬츠
-                </Styledmargin>
+                  #고고팬츠3세대
+                </StyledLink>
               </div>
-              <StyledDay
+              <StyledDate
                 onClick={() => {
                   setDay(day + 1);
                 }}
               >
                 {day}일
-              </StyledDay>
+              </StyledDate>
             </div>
           </StyledWrapper>
-
-          <StyledWrapper>
-            <div
-              css={css`
-                background-color: black;
-              `}
-            >
-              <StyledProfile src={PostImg} />
-            </div>
-
-            <div
-              css={css`
-                background-color: yellow;
-              `}
-            >
-              <StyledContentsWrapper>
-                <Styledmargin href="https://www.google.com">
-                  muyaho_123
-                </Styledmargin>
-                <span
-                  css={css`
-                    color: black;
-                  `}
-                >
-                  웹사이트 만든 거 처음이다 !~!~ 무야호ㅋㅋㅋㅋㅋ
-                </span>
-              </StyledContentsWrapper>
-
-              <StyledDay
-                onClick={() => {
-                  setDay(day + 1);
-                }}
-              >
-                {day}일
-              </StyledDay>
-            </div>
-          </StyledWrapper>
+          <Comment
+            profileImg={CommentProfileImg}
+            userName={"gangyaho____"}
+            contents={"좋아요 1등이다!! 처음으롭-!"}
+            date={day}
+            setDay={setDay}
+          />
+          <Comment
+            profileImg={CommentProfileImg}
+            userName={"yeonjuice_2000"}
+            contents={"우유 들어간 큐브라떼 먹고 쾌변함"}
+            date={day}
+            setDay={setDay}
+          />
+          <Comment
+            profileImg={CommentProfileImg}
+            userName={"im._boxxa"}
+            contents={"저는 복싱을 합니다."}
+            date={day}
+            setDay={setDay}
+          />
         </div>
+        <div
+          css={css`
+            background-color: yellow;
+          `}
+        >
+          <div>
+            {like === true ? (
+              <IoHeartOutline
+                onClick={() => {
+                  setLike(false);
+                  setLikeNum(likeNum - 1);
+                }}
+                css={Iconstyle}
+              />
+            ) : (
+              <IoHeartSharp
+                onClick={() => {
+                  setLike(true);
+                  setLikeNum(likeNum + 100);
+                }}
+                css={Iconstyle}
+              />
+            )}
+            <IoPaperPlaneOutline css={Iconstyle} />
+            <IoChatbubbleOutline css={Iconstyle} />
+            <IoBookmarkOutline css={Iconstyle} />
+          </div>
+        </div>
+        <div>like {likeNum}개</div>
       </div>
     </div>
   );
 };
+
 export default Post;
 
 const StyledProfile = styled.img`
   width: 40px;
   height: 40px;
   border-radius: 70%;
-  overflow: hidden;
-  margin-right: 16px;
+  margin-right: 17px;
 `;
-
-const StyledDay = styled.div`
+const StyledDate = styled.div`
   font-size: 16px;
   color: rgb(142, 142, 142);
 `;
-const Styledmargin = styled.a`
+const StyledLink = styled.a`
   text-decoration: none;
   color: black;
+  margin-right: 7px;
   font-weight: bold;
-  margin-right: 8px;
 `;
 const StyledWrapper = styled.div`
   display: flex;
   margin-top: 24px;
 `;
-const StyledContentsWrapper = styled.div`
+const StyledContentWrapper = styled.div`
+  display: inline;
   margin-bottom: 19px;
+  background-color: green;
+  align-items: center;
+`;
+const Iconstyle = css`
+  width: 24px;
+  height: 24px;
 `;
