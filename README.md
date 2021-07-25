@@ -74,3 +74,4 @@ https://developer.mozilla.org/ko/docs/Web/HTML/Element/span
 |20210711|@랭스터디카페 15:30~17:30(2H)|![pic1](./imgforupload/인증샷0711.jpeg)|
 |20210717|@이화스터디카페 15:30~17:30(2H)|![pic1](./imgforupload/인증샷0717.jpeg)|
 |20210718|@이화스터디카페 15:30~17:30(2H)|![pic1](./imgforupload/인증샷0718.png)|
+|20210724|@이화스터디카페 15:30~17:30(2H)|![pic1](./imgforupload/인증샷0725.jpeg)|
