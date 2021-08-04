@@ -9,7 +9,7 @@ const Comment = ({ profileImg, userName, contents, date, setDay }) => {
       <StyledProfile src={profileImg} />
       <div
         css={css`
-          background-color: orange;
+          background-color: white;
         `}
       >
         <StyledContentWrapper>
@@ -19,7 +19,7 @@ const Comment = ({ profileImg, userName, contents, date, setDay }) => {
         <div
           css={css`
             display: flex;
-            background-color: brown;
+            background-color: white;
             //justify-content: space-between;
             // width: 33%;
           `}
@@ -72,10 +72,10 @@ const StyledWrapper = styled.div`
 const StyledContentWrapper = styled.div`
   display: inline;
   margin-bottom: 19px;
-  background-color: green;
+  background-color: white;
   align-items: center;
 `;
-// const IconStyle = css`
-//   width: 24px;
-//   height: 24px;
-// `;
+const IconStyle = css`
+  width: 24px;
+  height: 24px;
+`;
