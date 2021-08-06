@@ -66,6 +66,11 @@ https://developer.mozilla.org/ko/docs/Web/HTML/Element/span
 
 #### ☑️ 이번주 과제
 - 인스타그램 웹페이지 색상코드 알아오기
+
+## 20210724
+![pic1](./imgforupload/스크린샷0724_1.png)
+![pic1](./imgforupload/스크린샷0724_2.png)
+![pic1](./imgforupload/스크린샷0724_3.png)
 ## 인증샷
 |날짜|장소 및 시간|인증샷|
 |:---:|:---:|:---:|
