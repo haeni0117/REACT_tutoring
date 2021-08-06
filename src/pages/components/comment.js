@@ -7,11 +7,7 @@ const Comment = ({ profileImg, userName, contents, date, setDay }) => {
   return (
     <StyledWrapper>
       <StyledProfile src={profileImg} />
-      <div
-        css={css`
-          background-color: white;
-        `}
-      >
+      <div>
         <StyledContentWrapper>
           <StyledLink href="#">{userName}</StyledLink>
           <span>{contents}</span>
@@ -19,9 +15,6 @@ const Comment = ({ profileImg, userName, contents, date, setDay }) => {
         <div
           css={css`
             display: flex;
-            background-color: white;
-            //justify-content: space-between;
-            // width: 33%;
           `}
         >
           <StyledDate
@@ -70,12 +63,8 @@ const StyledWrapper = styled.div`
   margin-top: 24px;
 `;
 const StyledContentWrapper = styled.div`
-  display: inline;
+  display: flex;
   margin-bottom: 19px;
-  background-color: white;
   align-items: center;
-`;
-const IconStyle = css`
-  width: 24px;
-  height: 24px;
+  display: inline;
 `;

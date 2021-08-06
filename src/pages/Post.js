@@ -5,10 +5,10 @@ import react, { useState } from "react";
 import PostImg from "../assets/images/image1.jpeg";
 import MyProfileImg from "../assets/images/image1.jpeg";
 import CommentProfileImg from "../assets/images/image1.jpeg";
-import Comment from "./components/comment";
-import Modal from "./components/modal";
+import Comment from "../pages/components/comment";
+import Modal from "../pages/components/modal";
 
-//icons
+// Icons
 import {
   IoHeartOutline,
   IoChatbubbleOutline,
@@ -23,20 +23,28 @@ const Post = () => {
   const [day, setDay] = useState(4);
   const [like, setLike] = useState(false);
   const [likeNum, setLikeNum] = useState(3976);
-  const today = new Date();
-  const [month, date] = [today.getMonth(), today.getDate()];
   const [reply, setReply] = useState();
+  const [isModalVisible, setModalVisible] = useState(false);
+
+  const today = new Date();
+  const [month, date] = [today.getMonth() + 1, today.getDate()]; //배열 할당
+
   const handleSubmit = (e) => {
     setReply(e.target.value);
   };
-  const [isModalVisibie, setModalVisibie] = useState(false);
 
   return (
-    <div>
+    <div
+      css={css`
+        display: flex;
+        justify-content: center;
+      `}
+    >
       <div
         css={css`
           display: flex;
-
+          position: relative;
+          width: fit-content;
           justify-content: center;
         `}
       >
@@ -50,37 +58,38 @@ const Post = () => {
 
         <div
           css={css`
-            background-color: white;
-            width: 70%;
-            font-size: 20px;
-            position: relative;
-            justify-content: center;
+            width: 33%;
           `}
         >
+          {/* 상단 프로필 부분 */}
           <StyledProfileWrapper>
-            <StyledProfile src={MyProfileImg} />
-            <div>
-              <StyledLink>youlakk</StyledLink>
-              <div>Chaing Mai, Thailand</div>
+            <div
+              css={css`
+                display: flex;
+              `}
+            >
+              <StyledProfile src={MyProfileImg} />
+              <div>
+                <StyledLink>youlakk</StyledLink>
+                <div>Chiang Mai, Thailand</div>
+              </div>
             </div>
-            <div>
-              <IoEllipsisHorizontalSharp />
-            </div>
+            <IoEllipsisHorizontalSharp
+              onClick={() => {
+                setModalVisible(true);
+              }}
+            />
           </StyledProfileWrapper>
+          {/* 프로필 하단 부분 */}
           <div
             css={css`
-              background-color: white;
               padding: 0 27px 11px 17px;
-              border-bottom: 1px solid #262626;
+              border-bottom: 1px solid rgb(142, 142, 142);
             `}
           >
             <StyledWrapper>
               <StyledProfile src={MyProfileImg} />
-              <div
-                css={css`
-                  background-color: white;
-                `}
-              >
+              <div>
                 <StyledContentWrapper>
                   <StyledLink href="#">youlakk</StyledLink>
                   <span>
@@ -97,6 +106,7 @@ const Post = () => {
                     css={css`
                       color: navy;
                       font-weight: normal;
+                      display: inline-block;
                     `}
                     href="#"
                   >
@@ -114,65 +124,63 @@ const Post = () => {
             </StyledWrapper>
             <Comment
               profileImg={CommentProfileImg}
-              userName={"gangyaho____"}
-              contents={"좋아요 1등이다!! 처음으롭-!"}
+              userName={"kwangya"}
+              contents={"광야로 가자..."}
               date={day}
               setDay={setDay}
             />
             <Comment
               profileImg={CommentProfileImg}
-              userName={"yeonjuice_2000"}
-              contents={"우유 들어간 큐브라떼 먹고 쾌변함"}
+              userName={"suye0n0117"}
+              contents={"리액트 넘 재밌다....!"}
               date={day}
               setDay={setDay}
             />
             <Comment
               profileImg={CommentProfileImg}
-              userName={"im._boxxa"}
-              contents={"저는 복싱을 합니다."}
+              userName={"limsudal"}
+              contents={"안녕 나는 수안이야 ㅎㅎ"}
               date={day}
               setDay={setDay}
             />
           </div>
           <div
             css={css`
-              background-color: white;
               padding: 15px 17px;
+              // background-color: yellowgreen;
               border-bottom: 1px solid rgb(142, 142, 142);
             `}
           >
-            <div>
-              <div
-                css={css`
-                  justify-content: space-between;
-                `}
-              >
-                {like === true ? (
-                  <IoHeartOutline
+            <div
+              css={css`
+                display: flex;
+                justify-content: space-between;
+              `}
+            >
+              <div>
+                {like ? (
+                  <IoHeartSharp
                     onClick={() => {
                       setLike(false);
                       setLikeNum(likeNum - 1);
                     }}
-                    css={Iconstyle}
+                    css={IconStyle}
                   />
                 ) : (
-                  <IoHeartSharp
+                  <IoHeartOutline
                     onClick={() => {
                       setLike(true);
-                      setLikeNum(likeNum + 100);
+                      setLikeNum(likeNum + 1);
                     }}
-                    css={Iconstyle}
+                    css={IconStyle}
                   />
                 )}
-                <IoPaperPlaneOutline css={Iconstyle} />
-                <IoChatbubbleOutline css={Iconstyle} />
+
+                <IoChatbubbleOutline css={IconStyle} />
+                <IoPaperPlaneOutline css={IconStyle} />
               </div>
-              <div
-                css={css`
-                  justify-content: distance-between;
-                `}
-              >
-                <IoBookmarkOutline css={Iconstyle} />
+              <div>
+                <IoBookmarkOutline css={IconStyle} />
               </div>
             </div>
             <div
@@ -184,39 +192,44 @@ const Post = () => {
             >
               좋아요 {likeNum}개
             </div>
-            <StyledDate fontSize={50}>
-              {month + 1}월 {date}일
+            <StyledDate fontSize={10}>
+              {month}월 {date}일
             </StyledDate>
           </div>
-        </div>
-        <div>
-          <div>
-            <AiOutlineSmile css={Iconstyle} />
-            <input
-              css={css`
-                border: none;
-                margin-left: 17px;
-              `}
+          <div
+            css={css`
+              padding: 17px 15px;
+              display: flex;
+              align-items: center;
+            `}
+          >
+            <AiOutlineSmile css={IconStyle} />
+            <StyledInput
               type="text"
-              placeholder="게시하기...."
-              onChange={(value) => {
-                setReply(value);
-              }}
+              value={reply}
+              placeholder="게시하기..."
+              onChange={handleSubmit}
             />
-            <StyledSubmitButton type="submit">게시</StyledSubmitButton>
+            <StyledSubmitButton type="submit" disabled={reply === ""}>
+              게시
+            </StyledSubmitButton>
+            {reply}
           </div>
-          {isModalVisibie && <Modal setModalVisibie={setModalVisibie} />}
         </div>
+        {isModalVisible && <Modal setModalVisible={setModalVisible} />}
       </div>
     </div>
   );
 };
 
 export default Post;
+
 const StyledProfileWrapper = styled.div`
   display: flex;
   padding: 21px 17px 15px 19px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid rgb(142, 142, 142);
+  justify-content: space-between;
+  align-items: center;
 `;
 
 const StyledProfile = styled.img`
@@ -226,9 +239,10 @@ const StyledProfile = styled.img`
   margin-right: 17px;
 `;
 const StyledDate = styled.div`
-  font-size: ${(props) => props.fontSize || 16}px;
   color: rgb(142, 142, 142);
+  font-size: ${(props) => props.fontSize || 16}px;
 `;
+
 const StyledLink = styled.a`
   text-decoration: none;
   color: black;
@@ -240,17 +254,26 @@ const StyledWrapper = styled.div`
   margin-top: 24px;
 `;
 const StyledContentWrapper = styled.div`
-  display: inline;
+  display: flex;
   margin-bottom: 19px;
-  background-color: white;
   align-items: center;
+  display: inline;
 `;
-const Iconstyle = css`
+const IconStyle = css`
   width: 24px;
   height: 24px;
 `;
+const StyledInput = styled.input`
+  border: none;
+  margin-left: 17px;
+  width: 70%;
+  font-size: 20px;
+`;
+
 const StyledSubmitButton = styled.button`
-rgb(142, 142, 142);
-color:skyblue;
-font-weight:bold;
-fontsize:20px;`;
+  border: none;
+  background: white;
+  color: skyblue;
+  font-weight: bold;
+  font-size: 20px;
+`;
