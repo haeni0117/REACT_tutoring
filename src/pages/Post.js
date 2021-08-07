@@ -2,11 +2,14 @@
 import { jsx, css } from "@emotion/react";
 import styled from "@emotion/styled";
 import react, { useState } from "react";
+//image
 import PostImg from "../assets/images/image1.jpeg";
 import MyProfileImg from "../assets/images/image1.jpeg";
 import CommentProfileImg from "../assets/images/image1.jpeg";
+
 import Comment from "../pages/components/comment";
 import Modal from "../pages/components/modal";
+import { useHistory } from "react-router-dom";
 
 // Icons
 import {
@@ -20,9 +23,10 @@ import {
 import { AiOutlineSmile } from "react-icons/ai";
 
 const Post = () => {
+  let history = useHistory();
   const [day, setDay] = useState(4);
   const [like, setLike] = useState(false);
-  const [likeNum, setLikeNum] = useState(3976);
+  const [likeNum, setLikeNum] = useState(0);
   const [reply, setReply] = useState();
   const [isModalVisible, setModalVisible] = useState(false);
 
@@ -32,12 +36,16 @@ const Post = () => {
   const handleSubmit = (e) => {
     setReply(e.target.value);
   };
+  const moveToMyPage = (e) => {
+    history.push("/MyPage");
+  };
 
   return (
     <div
       css={css`
         display: flex;
         justify-content: center;
+        padding-top: 100px;
       `}
     >
       <div
@@ -68,7 +76,7 @@ const Post = () => {
                 display: flex;
               `}
             >
-              <StyledProfile src={MyProfileImg} />
+              <StyledProfile onClick={moveToMyPage} src={MyProfileImg} />
               <div>
                 <StyledLink>youlakk</StyledLink>
                 <div>Chiang Mai, Thailand</div>
@@ -88,7 +96,7 @@ const Post = () => {
             `}
           >
             <StyledWrapper>
-              <StyledProfile src={MyProfileImg} />
+              <StyledProfile onClick={moveToMyPage} src={MyProfileImg} />
               <div>
                 <StyledContentWrapper>
                   <StyledLink href="#">youlakk</StyledLink>
