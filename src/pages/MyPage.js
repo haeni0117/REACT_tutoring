@@ -11,7 +11,7 @@ import Modal from "./components/modal";
 const Mypage = () => {
   return (
     <div css={{ backgroundColor: "pink" }}>
-      <div css={{ backgroundColor: "orange", display: flex }}>
+      <div css={{ backgroundColor: "orange", display: "flex" }}>
         <CircularProfileImg
           width={150}
           height={150}
@@ -30,7 +30,7 @@ const Mypage = () => {
 };
 export default Mypage;
 
-const circularProfile = styled.img`
+const CircularProfileImg = styled.img`
   width: ${(props) => props.width}px;
   height: ${(props) => props.width}px;
   border-radius: 70%;
