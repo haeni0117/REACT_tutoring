@@ -14,6 +14,8 @@
 ![pic1](./imgforupload/스크린샷0718_5.png)
 ### 20210724~20210801
 ![pic1](./imgforupload/스크린샷_완성.png)
+### 20210807~20210808
+![pic1](./imgforupload/0808튜터링결과물.png)
 
 ## 20210703 OT(이론)
 ### Github의 여러 기능(PR, Issue, 칸반보드, Action, 웹호스팅 등...)과 그 활용에 대해 알아보고 github 사용을 편리하게 해주는 툴을 소개했습니다.HTML, CSS, React가 무엇인지 간략하게 설명하고 아토믹 디자인과 css-in-js에 관해 알아보고 개발 환경 설정(Create React App과 Emotion)을 마쳤습니다. 이후 다음 시간부터 진행될 실습에 관해 간략하게 알아보았습니다.
