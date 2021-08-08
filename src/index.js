@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import Post from "./pages/Post.js";
+import Exercise from "./Exercise.js";
 import reportWebVitals from "./reportWebVitals";
 import AppMain from "./AppMain.js";
 //import App from ".App.js";
